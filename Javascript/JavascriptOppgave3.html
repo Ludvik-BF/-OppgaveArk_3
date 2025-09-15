@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<button onclick="alert('Mitt navn')">Vis mitt navn</button>
+
+<h1 id="overskrift">Overskrift</h1>
+
+<script>
+let h = document.getElementById("overskrift");
+h.onmouseover = function() { h.style.color = "red"; }
+h.onmouseout = function() { h.style.color = "black"; }
+h.onclick = function() { alert("Du klikket overskriften"); }
+</script>
+
+<div id="spill"></div>
+<script>
+let spill = document.getElementById("spill");
+let riktig = Math.floor(Math.random()*5);
+for (let i=0; i<5; i++) {
+  let b = document.createElement("button");
+  b.innerHTML = "Klikk meg";
+  b.onclick = function() {
+    if (i === riktig) { alert("Riktig!"); }
+    else { alert("Feil - prøv igjen"); }
+  }
+  spill.appendChild(b);
+}
+</script>
+
+<h2>Quiz</h2>
+<p>Hva er hovedstaden i Norge?</p>
+<button onclick="alert('Feil - prøv igjen!')">Stockholm</button>
+<button onclick="alert('Feil - prøv igjen!')">København</button>
+<button onclick="alert('Riktig')">Oslo</button>
+<button onclick="alert('Feil - prøv igjen!')">Helsinki</button>
+<button onclick="alert('Feil - prøv igjen!')">Reykjavik</button>
+
+<h2>Quiz med ol/li</h2>
+<p>Hva er hovedstaden i Norge?</p>
+<ol>
+  <li onclick="alert('Feil - prøv igjen!')">Stockholm</li>
+  <li onclick="alert('Feil - prøv igjen!')">København</li>
+  <li onclick="alert('Riktig')">Oslo</li>
+  <li onclick="alert('Feil - prøv igjen!')">Helsinki</li>
+  <li onclick="alert('Feil - prøv igjen!')">Reykjavik</li>
+</ol>
+
+<p>Dette er en setning hvor et ord er <span onclick="alert('Du trykket riktig!')">riktig</span> men du vet ikke hvilket.</p>
+
+</body>
+</html>

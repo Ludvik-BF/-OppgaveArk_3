@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+function visNavn() {
+  alert("Mitt navn");
+}
+visNavn();
+</script>
+
+<button onclick="visNavn()">Vis navnet mitt</button>
+
+<script>
+function skrivNavnMangeGanger() {
+  for (let i=0; i<1000; i++) {
+    document.write("Mitt navn<br>");
+  }
+}
+skrivNavnMangeGanger();
+</script>
+
+<h2>Kast terning</h2>
+<button onclick="kast()">Kast terning</button>
+<p id="resultat"></p>
+
+<script>
+function terning() {
+  return Math.floor(Math.random()*6)+1;
+}
+function kast() {
+  let tall = terning();
+  document.getElementById("resultat").innerHTML = "Du kastet en terning og fikk " + tall;
+}
+</script>
+
+</body>
+</html>

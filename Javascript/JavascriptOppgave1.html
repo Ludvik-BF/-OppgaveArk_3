@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div id="navn"></div>
+  <div id="navnVariabel"></div>
+  <input type="text" id="inp">
+  <button onclick="skrivUt()">Send</button>
+  <div id="svar"></div>
+  <h1>Dette blir overskrevet</h1>
+  <p id="tekst">Opprinnelig tekst</p>
+  <img id="bilde" src="bilde/mann.jpg">
+<script>
+alert("Utvikling")
+document.getElementById("navn").innerHTML = "Mitt navn er Ola"
+alert("Bredde: " + window.innerWidth + ", Høyde: " + window.innerHeight)
+let mittNavn = "Ola Nordmann"
+document.getElementById("navnVariabel").innerHTML = mittNavn
+function skrivUt() {
+  let tekst = document.getElementById("inp").value
+  document.getElementById("svar").innerHTML = tekst
+}
+document.body.innerHTML = "Hele body er byttet ut av scriptet"
+document.body.innerHTML += '<p id="tekst">Ny tekst via getElementById</p>'
+document.body.innerHTML += '<img id="bilde" src="bilde/dame.jpg">'
+</script>
+</body>
+</html>

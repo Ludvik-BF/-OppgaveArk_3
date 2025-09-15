@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+let navnListe = ["Ola", "Kari", "Per", "Lise", "Anna"];
+for (let i=0; i<navnListe.length; i++) {
+  document.write(navnListe[i] + "<br>");
+}
+
+let tallListe = [3, 9, 12, 25, 7, 18, 4, 11, 20, 5];
+for (let i=0; i<tallListe.length; i++) {
+  let t = tallListe[i];
+  let kvadrat = t*t;
+  let rot = Math.sqrt(t);
+  document.write(`Kvadratet av ${t} er ${kvadrat}, og roten er ${rot}<br>`);
+}
+
+function hilsen(navn) {
+  return `Hei ${navn}, hyggelig å se deg!`;
+}
+document.write(hilsen("Ola") + "<br>");
+
+let flereNavn = ["Oda", "Magnus", "Nora", "Henrik"];
+for (let i=0; i<flereNavn.length; i++) {
+  document.write(hilsen(flereNavn[i]) + "<br>");
+}
+
+function lagListeTil(n) {
+  let liste = [];
+  for (let i=0; i<=n; i++) {
+    liste.push(i);
+  }
+  return liste;
+}
+
+function sum(liste) {
+  let total = 0;
+  for (let i=0; i<liste.length; i++) {
+    total += liste[i];
+  }
+  return total;
+}
+
+let tallTil10000 = lagListeTil(10000);
+document.write(`Summen av tallene fra 0 til 10000 er ${sum(tallTil10000)}<br>`);
+
+let oddetall = [];
+for (let i=1; i<100; i++) {
+  if (i % 2 === 1) {
+    oddetall.push(i);
+  }
+}
+
+function produkt(liste) {
+  let total = 1;
+  for (let i=0; i<liste.length; i++) {
+    total *= liste[i];
+  }
+  return total;
+}
+
+document.write(`Summen av oddetallene fra 1 til 99 er ${sum(oddetall)}<br>`);
+document.write(`Produktet av oddetallene fra 1 til 99 er ${produkt(oddetall)}<br>`);
+</script>
+</body>
+</html>

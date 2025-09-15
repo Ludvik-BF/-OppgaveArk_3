@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+let by = prompt("Hvilken by er du født i?");
+if (by === "Oslo") {
+  document.write("Riktig by<br>");
+} else {
+  document.write("Feil by<br>");
+}
+
+for (let i=0; i<1000; i++) {
+  document.write("Navnet<br>");
+}
+
+document.write(15 % 2 + "<br>");
+document.write(15 % 3 + "<br>");
+document.write(10 % 3 + "<br>");
+document.write(12 % 3 + "<br>");
+document.write(16 % 2 + "<br>");
+
+let alder = prompt("Hva er din alder?");
+if (alder >= 18) {
+  document.write("Du er gammel nok<br>");
+} else {
+  document.write("Du er for ung<br>");
+}
+
+let sum = 0;
+for (let i=1; i<=100; i++) {
+  sum += i;
+}
+document.write(sum + "<br>");
+
+let sumOdd = 0;
+for (let i=1; i<=100; i+=2) {
+  sumOdd += i;
+}
+document.write(sumOdd + "<br>");
+
+let sum3 = 0;
+for (let i=0; i<=100; i++) {
+  if (i % 3 === 0) sum3 += i;
+}
+document.write(sum3 + "<br>");
+
+let tall = parseInt(prompt("Skriv inn et tall:"));
+let sumTall = 0;
+for (let i=1; i<=tall; i++) {
+  sumTall += i;
+}
+document.write(sumTall + "<br>");
+
+let poeng = 0;
+let spm1 = prompt("Spørsmål 1: ...");
+if (spm1 === "riktig") { poeng += 2; document.write("Riktig<br>"); }
+else { document.write("Feil<br>"); }
+
+let spm2 = prompt("Spørsmål 2: ...");
+if (spm2 === "riktig") { poeng += 2; document.write("Riktig<br>"); }
+else { document.write("Feil<br>"); }
+
+let spm3 = prompt("Spørsmål 3: ...");
+if (spm3 === "riktig") { poeng += 2; document.write("Riktig<br>"); }
+else { document.write("Feil<br>"); }
+
+let spm4 = prompt("Spørsmål 4: ...");
+if (spm4 === "riktig") { poeng += 2; document.write("Riktig<br>"); }
+else { document.write("Feil<br>"); }
+
+let spm5 = prompt("Spørsmål 5: ...");
+if (spm5 === "riktig") { poeng += 2; document.write("Riktig<br>"); }
+else { document.write("Feil<br>"); }
+
+document.write("Poeng: " + poeng + "<br>");
+document.write("Takk for at du deltok<br>");
+
+document.write("<table border=1>");
+for (let i=0; i<=1000; i++) {
+  document.write("<tr><td>"+i+"</td><td>"+(i*i)+"</td><td>"+(i*i*i)+"</td></tr>");
+}
+document.write("</table>");
+
+for (let i=1; i<=100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    document.write("FizzBuzz<br>");
+  } else if (i % 3 === 0) {
+    document.write("Fizz<br>");
+  } else if (i % 5 === 0) {
+    document.write("Buzz<br>");
+  } else {
+    document.write(i + "<br>");
+  }
+}
+</script>
+</body>
+</html>

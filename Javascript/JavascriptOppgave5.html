@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+let navn = "Mitt Navn";
+let alder = 25;
+let hilsen = `Hei ${navn}, du er ${alder} år gammel.`;
+document.write(hilsen + "<br>");
+
+function lagHilsen(navn) {
+  return `Hei ${navn}, hyggelig å se deg!`;
+}
+document.write(lagHilsen("Ola") + "<br>");
+document.write(lagHilsen("Kari") + "<br>");
+document.write(lagHilsen("Per") + "<br>");
+
+function landInfo(land, innbyggere) {
+  return `${land} har ${innbyggere} millioner innbyggere.`;
+}
+document.write(landInfo("Norge", 5) + "<br>");
+document.write(landInfo("Sverige", 10) + "<br>");
+document.write(landInfo("Danmark", 6) + "<br>");
+
+function tabellRad(fornavn, etternavn, alder) {
+  return `<tr><td>${fornavn}</td><td>${etternavn}</td><td>${alder}</td></tr>`;
+}
+
+document.write(`
+<table border="1">
+  <tr>
+    <th>Fornavn</th>
+    <th>Etternavn</th>
+    <th>Alder</th>
+  </tr>
+  ${tabellRad('Greta', 'Thunberg', 21)}
+  ${tabellRad('Ola', 'Nordmann', 30)}
+  ${tabellRad('Jenna', 'Ortega', 22)}
+  ${tabellRad('Dua', 'Lipa', 29)}
+</table>`);
+
+function hilsenMedFodselsaar(navn, alder) {
+  let fodselsaar = 2024 - alder;
+  return `Hei ${navn.toUpperCase()}, du er ${alder} år gammel og født i ${fodselsaar}.`;
+}
+document.write("<br>" + hilsenMedFodselsaar("Ola", 30) + "<br>");
+document.write(hilsenMedFodselsaar("Kari", 22) + "<br>");
+</script>
+</body>
+</html>
